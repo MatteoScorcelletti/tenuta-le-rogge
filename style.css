@@ -97,6 +97,14 @@ nav.scrolled {
   color: var(--white);
   text-decoration: none;
   transition: color var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo-img {
+  height: 36px;
+  width: auto;
 }
 
 .nav-logo:hover {
