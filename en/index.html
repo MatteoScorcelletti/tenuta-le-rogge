@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenuta le Rogge — The Authentic Essence of Maremma Toscana</title>
+  <meta name="description" content="Tenuta le Rogge — organic wines from the heart of Maremma Toscana, near Scansano. Morellino di Scansano DOCG, DOC Maremma, Rosato IGT.">
+  <meta name="theme-color" content="#2a1010">
+  <link rel="alternate" hreflang="it" href="../">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#" class="nav-logo">Tenuta le Rogge</a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li role="none"><a href="#story" role="menuitem" onclick="closeNav()">Our Story</a></li>
+      <li role="none"><a href="#philosophy" role="menuitem" onclick="closeNav()">Philosophy</a></li>
+      <li role="none"><a href="#wines" role="menuitem" onclick="closeNav()">Wines</a></li>
+      <li role="none"><a href="#contact" role="menuitem" onclick="closeNav()">Contact</a></li>
+      <li role="none"><a href="https://www.instagram.com/tenuta.le.rogge" target="_blank" rel="noopener" role="menuitem" onclick="closeNav()" aria-label="Instagram (opens in new tab)">Instagram</a></li>
+      <li role="none"><a href="../" class="lang-switch" role="menuitem" onclick="closeNav()">IT</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleNav()" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Welcome">
+    <h1 class="sr-only">Tenuta le Rogge</h1>
+    <img src="../images/hero-0.png" alt="Tenuta le Rogge — abstract watercolor logo in gold and deep red tones" class="hero-logo-img">
+    <p class="hero-coords">42&deg;42'26.1"N 11&deg;17'06.3"E</p>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- INTRO BANNER -->
+  <div class="intro-banner" role="banner">
+    <div class="intro-banner-content">
+      <p class="fade-up">The authentic essence of Maremma Toscana</p>
+      <p class="tagline fade-up delay-1">where passion redraws territory</p>
+    </div>
+  </div>
+
+  <!-- OUR STORY -->
+  <section class="split-section" id="story" aria-labelledby="story-heading">
+    <div class="split-text">
+      <h2 class="fade-up" id="story-heading">Our Story</h2>
+      <p class="fade-up delay-1">Tenuta le Rogge was born from an act of love for the land of Maremma. Alberto and his family took on the fascinating challenge of bringing abandoned vineyards back to life on a hill just seven kilometers from the charming village of Scansano. Shortly after, Simone's enthusiasm joined the project, strengthening the vision. Together, we work with dedication to craft wines that are a faithful expression of the authenticity and unmistakable character of the splendid Tuscan Maremma. Every bottle is a story of rebirth, a tribute to the territory and the passion that guides us.</p>
+    </div>
+    <div class="split-visual story-visual">
+      <img src="../images/story-0.jpeg" alt="Alberto working in the Tenuta le Rogge vineyards" class="split-visual-img" loading="lazy">
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="split-section reverse" id="philosophy" aria-labelledby="philosophy-heading">
+    <div class="split-text">
+      <h2 class="fade-up" id="philosophy-heading">Our Philosophy</h2>
+      <p class="fade-up delay-1">At Tenuta le Rogge, wine production is a symphony of respect and innovation. We firmly believe in a sustainable approach, where nature is not just a resource, but our main ally and inspiration. From the meticulous and respectful care of our vines, cultivated with attention to preserve their vitality and expression, to the aging in the cellar, every phase is orchestrated to enhance the unique terroir that hosts us. Our hills, kissed by the Maremma sun and caressed by the sea breeze, instill in our grapes that distinctive character that is then found in every sip.</p>
+    </div>
+    <div class="split-visual philosophy-visual">
+      <img src="../images/philosophy-0.jpeg" alt="Panoramic view of the Maremma Toscana vineyards" class="split-visual-img" loading="lazy">
+    </div>
+  </section>
+
+  <!-- WINES INTRO -->
+  <section class="wines-intro" id="wines" aria-labelledby="wines-heading">
+    <div class="wines-intro-text">
+      <h2 class="fade-up" id="wines-heading">Our Wines</h2>
+      <p class="subtitle fade-up delay-1">The Soul of Maremma in the Glass</p>
+      <p class="fade-up delay-2">The result of passion and deep respect for tradition, our wines embody the quintessence of the Maremma territory. Each bottle is a sensory journey that tells our story and the richness of our terroir.</p>
+    </div>
+    <div class="wines-intro-visual">
+      <img src="../images/wines-0.png" alt="Tenuta le Rogge wine bottles" class="split-visual-img" loading="lazy">
+    </div>
+  </section>
+
+  <!-- WINE CARDS -->
+  <div class="wines-section" aria-label="Wine catalogue">
+    <div class="wines-grid">
+
+      <!-- Morellino 2022 -->
+      <article class="wine-card fade-up">
+        <div class="wine-card-label">
+          <img src="../images/morellino-2022-0.png" alt="Morellino di Scansano DOCG 2022 label" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>Morellino di Scansano DOCG</h3>
+          <div class="wine-year">2022</div>
+          <div class="wine-abv">13% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Grapes</span>
+            <span class="wine-detail-value">90% Sangiovese, 10% Cabernet Sauvignon</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Training</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Harvest</span>
+            <span class="wine-detail-value">Mid-September, manual</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Fermentation</span>
+            <span class="wine-detail-value">Stainless steel, controlled temp, daily pump-overs</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Aging</span>
+            <span class="wine-detail-value">12 months in steel</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Serving</span>
+            <span class="wine-detail-value">16&ndash;18&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Tasting Notes</div>
+            <p>Ruby red color, on the nose stand out notes of small red fruits typical of Sangiovese. A dry and very fresh wine suitable for any meal.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 15</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="EU Organic certified">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Organic</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Morellino 2021 -->
+      <article class="wine-card fade-up delay-1">
+        <div class="wine-card-label">
+          <img src="../images/morellino-2021-0.png" alt="Morellino di Scansano DOCG 2021 label" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>Morellino di Scansano DOCG</h3>
+          <div class="wine-year">2021</div>
+          <div class="wine-abv">13.5% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Grapes</span>
+            <span class="wine-detail-value">85% Sangiovese, 15% Cabernet Sauvignon</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Training</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Harvest</span>
+            <span class="wine-detail-value">End of September, manual</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Fermentation</span>
+            <span class="wine-detail-value">Stainless steel, controlled temp, daily pump-overs</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Aging</span>
+            <span class="wine-detail-value">Half in steel 1 year, half in barriques &amp; tonneaux 12 mo</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Serving</span>
+            <span class="wine-detail-value">16&ndash;18&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Tasting Notes</div>
+            <p>Ruby red color, fresh fruit and spice notes on the nose. Dry and smooth to drink despite present, well-integrated tannins.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 17</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="EU Organic certified">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Organic</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- L'Origine 2019 -->
+      <article class="wine-card fade-up delay-2">
+        <div class="wine-card-label">
+          <img src="../images/origine-1.jpeg" alt="L'Origine DOC Maremma 2019 label" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>DOC Maremma &mdash; l'Origine</h3>
+          <div class="wine-year">2019</div>
+          <div class="wine-abv">13.5% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Grapes</span>
+            <span class="wine-detail-value">60% Cabernet Sauvignon, 30% Merlot, 10% Petit Verdot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Training</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Yield</span>
+            <span class="wine-detail-value">~40 quintals/hectare</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Harvest</span>
+            <span class="wine-detail-value">End of September, manual</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Aging</span>
+            <span class="wine-detail-value">60% steel 12 mo, 40% tonneaux 12 mo, bottled 12 mo</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Serving</span>
+            <span class="wine-detail-value">16&ndash;18&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Tasting Notes</div>
+            <p>Deep ruby color, herbaceous and balsamic notes from Cabernet Sauvignon on the nose. Great structure and persistence&mdash;a wine with great aging potential.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 22</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="EU Organic certified">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Organic</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Rosato 2024 -->
+      <article class="wine-card rosato fade-up">
+        <div class="wine-card-label">
+          <img src="../images/rosato-1.jpeg" alt="IGT Toscana Rosato 2024 label" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>IGT Toscana Rosato</h3>
+          <div class="wine-year">2024</div>
+          <div class="wine-abv">12% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Grapes</span>
+            <span class="wine-detail-value">60% Sangiovese, 40% Syrah</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Training</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Yield</span>
+            <span class="wine-detail-value">~50 quintals/hectare</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Harvest</span>
+            <span class="wine-detail-value">End of September, manual</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Fermentation</span>
+            <span class="wine-detail-value">Stainless steel, controlled temperature</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Serving</span>
+            <span class="wine-detail-value">8&ndash;10&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Tasting Notes</div>
+            <p>Intense pink color, fruity notes of strawberry and cherry on the nose. On the palate, a lively, fresh and savory sip. Pairs perfectly with fried dishes.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 12</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="EU Organic certified">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Organic</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Rosato Frizzante 2024 -->
+      <article class="wine-card rosato fade-up delay-1">
+        <div class="wine-card-label">
+          <img src="../images/rosato-frizzante-1.jpeg" alt="IGT Toscana Rosato Frizzante 2024 label" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>IGT Toscana Rosato Frizzante</h3>
+          <div class="wine-year">2024</div>
+          <div class="wine-abv">12.5% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Grapes</span>
+            <span class="wine-detail-value">60% Sangiovese, 40% Syrah</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Training</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Yield</span>
+            <span class="wine-detail-value">~50 quintals/hectare</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Harvest</span>
+            <span class="wine-detail-value">End of September, manual</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Method</span>
+            <span class="wine-detail-value">Bottle-fermented, 60 days in bottle</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Serving</span>
+            <span class="wine-detail-value">5&ndash;8&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Tasting Notes</div>
+            <p>Intense pink color, fruity notes of strawberry and cherry. A lively, fresh and savory sip. The bubbles make it a versatile wine, perfect as an aperitif.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 12.50</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="EU Organic certified">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Organic</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <h2 class="fade-up" id="contact-heading">Contacts</h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="contact-item fade-up">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">
+          Simone: <a href="tel:+393347542824">+39 334 7542824</a><br>
+          Alberto: <a href="tel:+393939582601">+39 393 958 2601</a>
+        </div>
+      </div>
+      <div class="contact-item fade-up delay-1">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:tenutalerogge@gmail.com">tenutalerogge@gmail.com</a></div>
+      </div>
+      <div class="contact-item fade-up delay-2">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Localit&agrave; Fosso Lombardo<br>Scansano (GR), Tuscany</div>
+      </div>
+      <div class="contact-item fade-up delay-3">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </div>
+        <div class="contact-label">Instagram</div>
+        <div class="contact-value"><a href="https://www.instagram.com/tenuta.le.rogge" target="_blank" rel="noopener">@tenuta.le.rogge</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Vinum A.C. societ&agrave; agricola A.R.L., Via Aurelia Nord 98, Grosseto CAP: 58100</p>
+    <p>P.IVA 01621680535</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

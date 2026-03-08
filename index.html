@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenuta le Rogge — L'Essenza Autentica della Maremma Toscana</title>
+  <meta name="description" content="Tenuta le Rogge — vini biologici dal cuore della Maremma Toscana, vicino a Scansano. Morellino di Scansano DOCG, DOC Maremma, Rosato IGT.">
+  <meta name="theme-color" content="#2a1010">
+  <link rel="alternate" hreflang="en" href="en/">
+  <link rel="alternate" hreflang="it" href="./">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" role="navigation" aria-label="Navigazione principale">
+    <a href="#" class="nav-logo">Tenuta le Rogge</a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li role="none"><a href="#storia" role="menuitem" onclick="closeNav()">La Nostra Storia</a></li>
+      <li role="none"><a href="#filosofia" role="menuitem" onclick="closeNav()">Filosofia</a></li>
+      <li role="none"><a href="#vini" role="menuitem" onclick="closeNav()">Vini</a></li>
+      <li role="none"><a href="#contatti" role="menuitem" onclick="closeNav()">Contatti</a></li>
+      <li role="none"><a href="https://www.instagram.com/tenuta.le.rogge" target="_blank" rel="noopener" role="menuitem" onclick="closeNav()" aria-label="Instagram (si apre in una nuova scheda)">Instagram</a></li>
+      <li role="none"><a href="en/" class="lang-switch" role="menuitem" onclick="closeNav()">EN</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" onclick="toggleNav()" aria-label="Apri menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Benvenuti">
+    <h1 class="sr-only">Tenuta le Rogge</h1>
+    <img src="images/hero-0.png" alt="Tenuta le Rogge — logo con arte ad acquerello nei toni dell'oro e del rosso intenso" class="hero-logo-img">
+    <p class="hero-coords">42&deg;42'26.1"N 11&deg;17'06.3"E</p>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scorri</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- INTRO BANNER -->
+  <div class="intro-banner" role="banner">
+    <div class="intro-banner-content">
+      <p class="fade-up">L'essenza autentica della Maremma Toscana</p>
+      <p class="tagline fade-up delay-1">dove la passione ridisegna il territorio</p>
+    </div>
+  </div>
+
+  <!-- LA NOSTRA STORIA -->
+  <section class="split-section" id="storia" aria-labelledby="storia-heading">
+    <div class="split-text">
+      <h2 class="fade-up" id="storia-heading">La Nostra Storia</h2>
+      <p class="fade-up delay-1">Tenuta le Rogge nasce da un atto d'amore per la terra di Maremma. Alberto e la sua famiglia hanno raccolto l'affascinante sfida di riportare in vita vigneti abbandonati su una collina a soli sette chilometri dal suggestivo borgo di Scansano. Poco dopo, l'entusiasmo di Simone si &egrave; unito al progetto, rafforzando la visione. Insieme, lavoriamo con dedizione per produrre vini che siano una fedele espressione dell'autenticit&agrave; e dell'inconfondibile carattere della splendida Maremma Toscana. Ogni bottiglia &egrave; una storia di rinascita, un omaggio al territorio e alla passione che ci guida.</p>
+    </div>
+    <div class="split-visual story-visual">
+      <img src="images/story-0.jpeg" alt="Alberto al lavoro nei vigneti di Tenuta le Rogge" class="split-visual-img" loading="lazy">
+    </div>
+  </section>
+
+  <!-- FILOSOFIA -->
+  <section class="split-section reverse" id="filosofia" aria-labelledby="filosofia-heading">
+    <div class="split-text">
+      <h2 class="fade-up" id="filosofia-heading">La Nostra Filosofia</h2>
+      <p class="fade-up delay-1">In Tenuta le Rogge, la produzione vinicola &egrave; una sinfonia di rispetto e innovazione. Crediamo fermamente in un approccio sostenibile, dove la natura non &egrave; solo una risorsa, ma la nostra principale alleata e ispirazione. Dalla cura meticolosa e rispettosa delle nostre viti, coltivate con attenzione per preservarne la vitalit&agrave; e l'espressione, all'affinamento in cantina, ogni fase &egrave; orchestrata per esaltare l'unico terroir che ci ospita. Le nostre colline, baciate dal sole della Maremma e accarezzate dalla brezza marina, infondono nelle nostre uve quel carattere distintivo che si ritrova in ogni sorso.</p>
+    </div>
+    <div class="split-visual philosophy-visual">
+      <img src="images/philosophy-0.jpeg" alt="Vista panoramica dei vigneti in Maremma Toscana" class="split-visual-img" loading="lazy">
+    </div>
+  </section>
+
+  <!-- I NOSTRI VINI -->
+  <section class="wines-intro" id="vini" aria-labelledby="vini-heading">
+    <div class="wines-intro-text">
+      <h2 class="fade-up" id="vini-heading">I Nostri Vini</h2>
+      <p class="subtitle fade-up delay-1">L'Anima della Maremma nel Bicchiere</p>
+      <p class="fade-up delay-2">Frutto della passione e del profondo rispetto per la tradizione, i nostri vini incarnano la quintessenza del territorio maremmano. Ogni bottiglia &egrave; un viaggio sensoriale che racconta la nostra storia e la ricchezza del nostro terroir.</p>
+    </div>
+    <div class="wines-intro-visual">
+      <img src="images/wines-0.png" alt="Bottiglie di vino Tenuta le Rogge" class="split-visual-img" loading="lazy">
+    </div>
+  </section>
+
+  <!-- SCHEDE VINI -->
+  <div class="wines-section" aria-label="Catalogo vini">
+    <div class="wines-grid">
+
+      <!-- Morellino 2022 -->
+      <article class="wine-card fade-up">
+        <div class="wine-card-label">
+          <img src="images/morellino-2022-0.png" alt="Etichetta Morellino di Scansano DOCG 2022" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>Morellino di Scansano DOCG</h3>
+          <div class="wine-year">2022</div>
+          <div class="wine-abv">13% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Uve</span>
+            <span class="wine-detail-value">90% Sangiovese, 10% Cabernet Sauvignon</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Allevamento</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Vendemmia</span>
+            <span class="wine-detail-value">Met&agrave; settembre, manuale</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Fermentazione</span>
+            <span class="wine-detail-value">Acciaio inox, temperatura controllata, rimontaggi giornalieri</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Affinamento</span>
+            <span class="wine-detail-value">12 mesi in acciaio</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Servizio</span>
+            <span class="wine-detail-value">16&ndash;18&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Note di Degustazione</div>
+            <p>Colore rosso rubino, al naso spiccano note di piccoli frutti rossi tipici del Sangiovese. Un vino secco e molto fresco, adatto ad ogni pasto.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 15</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="Certificazione biologica EU">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Biologico</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Morellino 2021 -->
+      <article class="wine-card fade-up delay-1">
+        <div class="wine-card-label">
+          <img src="images/morellino-2021-0.png" alt="Etichetta Morellino di Scansano DOCG 2021" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>Morellino di Scansano DOCG</h3>
+          <div class="wine-year">2021</div>
+          <div class="wine-abv">13,5% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Uve</span>
+            <span class="wine-detail-value">85% Sangiovese, 15% Cabernet Sauvignon</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Allevamento</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Vendemmia</span>
+            <span class="wine-detail-value">Fine settembre, manuale</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Fermentazione</span>
+            <span class="wine-detail-value">Acciaio inox, temperatura controllata, rimontaggi giornalieri</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Affinamento</span>
+            <span class="wine-detail-value">Met&agrave; in acciaio 1 anno, met&agrave; in barriques e tonneaux 12 mesi</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Servizio</span>
+            <span class="wine-detail-value">16&ndash;18&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Note di Degustazione</div>
+            <p>Colore rosso rubino, al naso note di frutta fresca e spezie. Secco e morbido al palato nonostante i tannini presenti e ben integrati.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 17</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="Certificazione biologica EU">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Biologico</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- L'Origine 2019 -->
+      <article class="wine-card fade-up delay-2">
+        <div class="wine-card-label">
+          <img src="images/origine-1.jpeg" alt="Etichetta l'Origine DOC Maremma 2019" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>DOC Maremma &mdash; l'Origine</h3>
+          <div class="wine-year">2019</div>
+          <div class="wine-abv">13,5% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Uve</span>
+            <span class="wine-detail-value">60% Cabernet Sauvignon, 30% Merlot, 10% Petit Verdot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Allevamento</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Resa</span>
+            <span class="wine-detail-value">~40 quintali/ettaro</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Vendemmia</span>
+            <span class="wine-detail-value">Fine settembre, manuale</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Affinamento</span>
+            <span class="wine-detail-value">60% acciaio 12 mesi, 40% tonneaux 12 mesi, poi bottiglia 12 mesi</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Servizio</span>
+            <span class="wine-detail-value">16&ndash;18&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Note di Degustazione</div>
+            <p>Colore rosso rubino intenso, note erbacee e balsamiche dal Cabernet Sauvignon al naso. Grande struttura e persistenza&mdash;un vino con grande potenziale di invecchiamento.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 22</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="Certificazione biologica EU">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Biologico</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Rosato 2024 -->
+      <article class="wine-card rosato fade-up">
+        <div class="wine-card-label">
+          <img src="images/rosato-1.jpeg" alt="Etichetta IGT Toscana Rosato 2024" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>IGT Toscana Rosato</h3>
+          <div class="wine-year">2024</div>
+          <div class="wine-abv">12% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Uve</span>
+            <span class="wine-detail-value">60% Sangiovese, 40% Syrah</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Allevamento</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Resa</span>
+            <span class="wine-detail-value">~50 quintali/ettaro</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Vendemmia</span>
+            <span class="wine-detail-value">Fine settembre, manuale</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Fermentazione</span>
+            <span class="wine-detail-value">Acciaio inox, temperatura controllata</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Servizio</span>
+            <span class="wine-detail-value">8&ndash;10&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Note di Degustazione</div>
+            <p>Colore rosa intenso, note fruttate di fragola e ciliegia al naso. Al palato, un sorso vivace, fresco e sapido. Si abbina perfettamente con piatti fritti.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 12</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="Certificazione biologica EU">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Biologico</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Rosato Frizzante 2024 -->
+      <article class="wine-card rosato fade-up delay-1">
+        <div class="wine-card-label">
+          <img src="images/rosato-frizzante-1.jpeg" alt="Etichetta IGT Toscana Rosato Frizzante 2024" loading="lazy">
+        </div>
+        <div class="wine-card-header">
+          <h3>IGT Toscana Rosato Frizzante</h3>
+          <div class="wine-year">2024</div>
+          <div class="wine-abv">12,5% vol.</div>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-detail">
+            <span class="wine-detail-label">Uve</span>
+            <span class="wine-detail-value">60% Sangiovese, 40% Syrah</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Allevamento</span>
+            <span class="wine-detail-value">Guyot</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Resa</span>
+            <span class="wine-detail-value">~50 quintali/ettaro</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Vendemmia</span>
+            <span class="wine-detail-value">Fine settembre, manuale</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Metodo</span>
+            <span class="wine-detail-value">Rifermentazione in bottiglia, 60 giorni</span>
+          </div>
+          <div class="wine-detail">
+            <span class="wine-detail-label">Servizio</span>
+            <span class="wine-detail-value">5&ndash;8&deg;C</span>
+          </div>
+          <div class="wine-tasting">
+            <div class="wine-tasting-label">Note di Degustazione</div>
+            <p>Colore rosa intenso, note fruttate di fragola e ciliegia. Un sorso vivace, fresco e sapido. Le bollicine lo rendono un vino versatile, perfetto come aperitivo.</p>
+          </div>
+        </div>
+        <div class="wine-card-footer">
+          <span class="wine-price">&euro; 12,50</span>
+          <div class="wine-badge">
+            <div class="organic-icon" aria-label="Certificazione biologica EU">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
+            </div>
+            <span class="organic-label">Biologico</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- CONTATTI -->
+  <section class="contact" id="contatti" aria-labelledby="contatti-heading">
+    <h2 class="fade-up" id="contatti-heading">Contatti</h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="contact-item fade-up">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="contact-label">Telefono</div>
+        <div class="contact-value">
+          Simone: <a href="tel:+393347542824">+39 334 7542824</a><br>
+          Alberto: <a href="tel:+393939582601">+39 393 958 2601</a>
+        </div>
+      </div>
+      <div class="contact-item fade-up delay-1">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:tenutalerogge@gmail.com">tenutalerogge@gmail.com</a></div>
+      </div>
+      <div class="contact-item fade-up delay-2">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contact-label">Dove Siamo</div>
+        <div class="contact-value">Localit&agrave; Fosso Lombardo<br>Scansano (GR), Toscana</div>
+      </div>
+      <div class="contact-item fade-up delay-3">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </div>
+        <div class="contact-label">Instagram</div>
+        <div class="contact-value"><a href="https://www.instagram.com/tenuta.le.rogge" target="_blank" rel="noopener">@tenuta.le.rogge</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Vinum A.C. societ&agrave; agricola A.R.L., Via Aurelia Nord 98, Grosseto CAP: 58100</p>
+    <p>P.IVA 01621680535</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
