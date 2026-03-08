@@ -24,6 +24,10 @@
       <li role="none"><a href="#vini" role="menuitem" onclick="closeNav()">Vini</a></li>
       <li role="none"><a href="#contatti" role="menuitem" onclick="closeNav()">Contatti</a></li>
       <li role="none"><a href="https://www.instagram.com/tenuta.le.rogge" target="_blank" rel="noopener" role="menuitem" onclick="closeNav()" aria-label="Instagram (si apre in una nuova scheda)">Instagram</a></li>
+      <li role="none"><a href="#" role="menuitem" onclick="closeNav(); toggleCart();" class="nav-cart-link" aria-label="Carrello">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount" style="display:none;">0</span>
+      </a></li>
       <li role="none"><a href="en/" class="lang-switch" role="menuitem" onclick="closeNav()">EN</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" onclick="toggleNav()" aria-label="Apri menu" aria-expanded="false">
@@ -128,12 +132,10 @@
         </div>
         <div class="wine-card-footer">
           <span class="wine-price">&euro; 15</span>
-          <div class="wine-badge">
-            <div class="organic-icon" aria-label="Certificazione biologica EU">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
-            </div>
-            <span class="organic-label">Biologico</span>
-          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('morellino-2022', 'Morellino di Scansano DOCG 2022', 15)" aria-label="Aggiungi al carrello">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Aggiungi
+          </button>
         </div>
       </article>
 
@@ -179,12 +181,10 @@
         </div>
         <div class="wine-card-footer">
           <span class="wine-price">&euro; 17</span>
-          <div class="wine-badge">
-            <div class="organic-icon" aria-label="Certificazione biologica EU">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
-            </div>
-            <span class="organic-label">Biologico</span>
-          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('morellino-2021', 'Morellino di Scansano DOCG 2021', 17)" aria-label="Aggiungi al carrello">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Aggiungi
+          </button>
         </div>
       </article>
 
@@ -230,12 +230,10 @@
         </div>
         <div class="wine-card-footer">
           <span class="wine-price">&euro; 22</span>
-          <div class="wine-badge">
-            <div class="organic-icon" aria-label="Certificazione biologica EU">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
-            </div>
-            <span class="organic-label">Biologico</span>
-          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('origine-2019', 'DOC Maremma — l\'Origine 2019', 22)" aria-label="Aggiungi al carrello">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Aggiungi
+          </button>
         </div>
       </article>
 
@@ -281,12 +279,10 @@
         </div>
         <div class="wine-card-footer">
           <span class="wine-price">&euro; 12</span>
-          <div class="wine-badge">
-            <div class="organic-icon" aria-label="Certificazione biologica EU">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
-            </div>
-            <span class="organic-label">Biologico</span>
-          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('rosato-2024', 'IGT Toscana Rosato 2024', 12)" aria-label="Aggiungi al carrello">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Aggiungi
+          </button>
         </div>
       </article>
 
@@ -332,17 +328,66 @@
         </div>
         <div class="wine-card-footer">
           <span class="wine-price">&euro; 12,50</span>
-          <div class="wine-badge">
-            <div class="organic-icon" aria-label="Certificazione biologica EU">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M7 12c0-3 2.5-5 5-5s5 2 5 5-2.5 5-5 5-5-2-5-5z"/><path d="M12 3v2m0 14v2m-7-9H3m18 0h-2m-1.5-5.5L16 8m-8 8l-1.5 1.5m11-1.5L16 16M6.5 6.5L8 8"/></svg>
-            </div>
-            <span class="organic-label">Biologico</span>
-          </div>
+          <button class="add-to-cart-btn" onclick="addToCart('rosato-frizzante-2024', 'IGT Toscana Rosato Frizzante 2024', 12.50)" aria-label="Aggiungi al carrello">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Aggiungi
+          </button>
         </div>
       </article>
 
     </div>
   </div>
+
+  <!-- B2B -->
+  <section class="b2b-section" id="b2b" aria-labelledby="b2b-heading">
+    <div class="b2b-content fade-up">
+      <h2 id="b2b-heading">Per Ristoranti e Rivenditori</h2>
+      <div class="divider"></div>
+      <p>Offriamo forniture personalizzate per ristoranti, enoteche e rivenditori. Collaboriamo con chi condivide la nostra passione per il vino di qualit&agrave; e desidera portare l'autenticit&agrave; della Maremma Toscana sulla propria tavola.</p>
+      <p class="b2b-subtitle">Contattaci per listini dedicati, quantit&agrave; personalizzate e condizioni riservate.</p>
+      <div class="b2b-actions">
+        <a href="mailto:tenutalerogge@gmail.com?subject=Richiesta%20B2B%20-%20Tenuta%20le%20Rogge" class="b2b-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Scrivici
+        </a>
+        <a href="tel:+393939582601" class="b2b-btn b2b-btn-outline">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Chiama Alberto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrello">
+    <div class="cart-drawer-header">
+      <h3>Il Tuo Carrello</h3>
+      <button onclick="toggleCart()" aria-label="Chiudi carrello" class="cart-close">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body" id="cartBody">
+      <p class="cart-empty">Il carrello &egrave; vuoto</p>
+    </div>
+    <div class="cart-drawer-footer" id="cartFooter" style="display:none;">
+      <div class="cart-shipping">
+        <label for="shippingZone">Spedizione</label>
+        <select id="shippingZone" onchange="updateCartTotals()">
+          <option value="italy">Italia — &euro;9 per cartone</option>
+          <option value="eu">Europa — &euro;20 per cartone</option>
+          <option value="world">Resto del mondo — &euro;40 per cartone</option>
+        </select>
+      </div>
+      <div class="cart-summary">
+        <div class="cart-summary-row"><span>Subtotale</span><span id="cartSubtotal">&euro;0</span></div>
+        <div class="cart-summary-row"><span>Spedizione</span><span id="cartShipping">&euro;0</span></div>
+        <div class="cart-summary-row cart-total"><span>Totale</span><span id="cartTotal">&euro;0</span></div>
+      </div>
+      <p class="cart-min-note">Ordine minimo: 6 bottiglie (1 cartone), anche miste.</p>
+      <div id="paypal-button-container"></div>
+    </div>
+  </aside>
 
   <!-- INSTAGRAM -->
   <section class="instagram-section" id="instagram" aria-labelledby="instagram-heading">
@@ -423,6 +468,7 @@
     <p>P.IVA 01621680535</p>
   </footer>
 
+  <script src="https://www.paypal.com/sdk/js?client-id=PLACEHOLDER_PAYPAL_CLIENT_ID&currency=EUR" data-sdk-integration-source="button-factory"></script>
   <script src="script.js"></script>
 </body>
 </html>
