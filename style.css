@@ -103,8 +103,9 @@ nav.scrolled {
 }
 
 .nav-logo-img {
-  height: 36px;
-  width: auto;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
 }
 
 .nav-logo:hover {
