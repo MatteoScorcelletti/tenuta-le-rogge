@@ -20,14 +20,12 @@ function toggleNav() {
   var isOpen = navLinks.classList.toggle('open');
   hamburger.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', isOpen);
-  document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 
 function closeNav() {
   navLinks.classList.remove('open');
   hamburger.classList.remove('open');
   hamburger.setAttribute('aria-expanded', 'false');
-  document.body.style.overflow = '';
 }
 
 // Close on Escape key

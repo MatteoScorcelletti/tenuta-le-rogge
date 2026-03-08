@@ -915,34 +915,38 @@ footer {
     padding: 0.7rem 1.5rem;
   }
 
-  nav#navbar {
-    z-index: var(--z-modal);
-  }
-
   .nav-links {
     display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(42, 16, 16, 0.98);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--maroon);
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    z-index: var(--z-overlay);
+    gap: 0;
+    padding: 1rem 0 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   }
 
   .nav-links.open {
     display: flex;
   }
 
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
   .nav-links a {
-    font-size: 1rem;
-    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    display: block;
+    padding: 0.9rem 2rem;
   }
 
   .nav-hamburger {
     display: flex;
-    z-index: var(--z-modal);
   }
 
   .hero-logo-img {
