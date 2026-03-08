@@ -73,19 +73,20 @@ nav {
   left: 0;
   right: 0;
   z-index: var(--z-sticky);
-  padding: 1.4rem 3rem;
+  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background var(--transition-slow), padding var(--transition-slow), box-shadow var(--transition-slow);
-}
-
-nav.scrolled {
   background: rgba(42, 16, 16, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 0.9rem 3rem;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  transition: padding var(--transition-slow);
+}
+
+nav.scrolled {
+  padding: 0.7rem 3rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
 .nav-logo {
@@ -186,7 +187,7 @@ nav.scrolled {
   text-align: center;
   background: var(--white);
   color: var(--maroon);
-  padding: 2rem;
+  padding: 5rem 2rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -707,18 +708,71 @@ nav.scrolled {
   stroke-width: 1.5;
 }
 
-.instagram-embed-wrap {
+.instagram-preview {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
 }
 
-.instagram-embed-wrap iframe {
-  border: none;
+.instagram-card {
+  display: block;
+  text-decoration: none;
+  color: var(--white);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 8px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-  max-width: 100%;
+  overflow: hidden;
+  max-width: 380px;
+  width: 100%;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  cursor: pointer;
+}
+
+.instagram-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+  border-color: var(--gold);
+}
+
+.instagram-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.instagram-card-thumb {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.instagram-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.instagram-card:hover .instagram-card-thumb img {
+  transform: scale(1.05);
+}
+
+.instagram-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.instagram-card:hover .instagram-card-footer {
+  color: var(--gold);
 }
 
 .instagram-handle {
@@ -750,7 +804,7 @@ nav.scrolled {
     align-self: center;
   }
 
-  .instagram-embed-wrap {
+  .instagram-preview {
     padding: 0 2rem 3rem;
   }
 }
