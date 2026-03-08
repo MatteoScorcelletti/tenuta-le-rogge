@@ -828,6 +828,8 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   transition: border-color var(--transition-base), background var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .contact-item:hover .contact-icon {
