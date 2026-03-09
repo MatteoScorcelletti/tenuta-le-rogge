@@ -1406,9 +1406,8 @@ footer {
     display: flex;
   }
 
-  .nav-docg,
-  .nav-bio-img {
-    display: none;
+  .nav-docg {
+    margin-left: 0;
   }
 
   .hero-logo-img {
