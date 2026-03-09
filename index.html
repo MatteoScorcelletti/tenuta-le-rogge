@@ -412,8 +412,7 @@
         <label for="cartPhone">Telefono</label>
         <input type="tel" id="cartPhone" placeholder="+39 333 1234567">
       </div>
-      <button class="cart-checkout-btn" onclick="sendOrder()">Invia Ordine via Email</button>
-      <p class="cart-checkout-note">Riceverai le istruzioni di pagamento via email.</p>
+      <div id="paypal-button-container"></div>
     </div>
   </aside>
 
@@ -496,6 +495,7 @@
     <p>P.IVA 01621680535</p>
   </footer>
 
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR&merchant-id=albertocarlotti@hotmail.it" data-sdk-integration-source="button-factory"></script>
   <script src="script.js"></script>
 </body>
 </html>
