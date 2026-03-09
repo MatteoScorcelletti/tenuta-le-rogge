@@ -1406,6 +1406,10 @@ footer {
     display: flex;
   }
 
+  .nav-logo-text {
+    text-align: center;
+  }
+
   .nav-docg {
     margin-left: 0;
   }
