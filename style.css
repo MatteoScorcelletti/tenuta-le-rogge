@@ -133,6 +133,7 @@ nav.show-title .nav-docg {
 }
 
 .nav-bio-img {
+  margin-left: 75px;
   height: 30px;
   width: auto;
   object-fit: contain;
@@ -1411,6 +1412,10 @@ footer {
   }
 
   .nav-docg {
+    margin-left: 0;
+  }
+
+  .nav-bio-img {
     margin-left: 0;
   }
 
