@@ -117,6 +117,33 @@ nav.show-title .nav-logo-text {
   opacity: 1;
 }
 
+.nav-docg {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+nav.show-title .nav-docg {
+  opacity: 1;
+}
+
+.nav-bio-img {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+nav.show-title .nav-bio-img {
+  opacity: 1;
+}
+
 .nav-logo:hover {
   color: var(--gold);
 }
