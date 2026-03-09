@@ -187,75 +187,57 @@ function toggleCart() {
 // Initialize cart badge on page load
 updateCartBadge();
 
-// PayPal integration (placeholder - replace PLACEHOLDER_PAYPAL_CLIENT_ID with real client ID)
-function initPayPal() {
-  if (typeof paypal === 'undefined') return;
+// Send order via email
+function sendOrder() {
+  var isIT = document.documentElement.lang === 'it';
+  var totalBottles = getTotalBottles();
 
-  var container = document.getElementById('paypal-button-container');
-  if (!container || container.children.length > 0) return;
+  if (totalBottles < MIN_BOTTLES) {
+    alert(isIT ? 'Ordine minimo: 6 bottiglie.' : 'Minimum order: 6 bottles.');
+    return;
+  }
 
-  paypal.Buttons({
-    style: {
-      layout: 'vertical',
-      color: 'gold',
-      shape: 'rect',
-      label: 'paypal',
-      height: 40
-    },
-    createOrder: function (data, actions) {
-      var totals = updateCartTotals();
-      var totalBottles = getTotalBottles();
+  var name = document.getElementById('cartName').value.trim();
+  var address = document.getElementById('cartAddress').value.trim();
+  var city = document.getElementById('cartCity').value.trim();
+  var zip = document.getElementById('cartZip').value.trim();
+  var country = document.getElementById('cartCountry').value.trim();
+  var email = document.getElementById('cartEmail').value.trim();
+  var phone = document.getElementById('cartPhone').value.trim();
 
-      if (totalBottles < MIN_BOTTLES) {
-        var isIT = document.documentElement.lang === 'it';
-        alert(isIT ? 'Ordine minimo: 6 bottiglie.' : 'Minimum order: 6 bottles.');
-        return;
-      }
+  if (!name || !address || !city || !zip || !country || !email) {
+    alert(isIT ? 'Per favore compila tutti i campi obbligatori.' : 'Please fill in all required fields.');
+    return;
+  }
 
-      var items = cart.map(function (item) {
-        return {
-          name: item.name,
-          unit_amount: { currency_code: 'EUR', value: item.price.toFixed(2) },
-          quantity: item.qty.toString()
-        };
-      });
+  var totals = updateCartTotals();
+  var zone = document.getElementById('shippingZone');
+  var zoneName = zone.options[zone.selectedIndex].text;
 
-      return actions.order.create({
-        purchase_units: [{
-          description: 'Tenuta le Rogge — Vini',
-          amount: {
-            currency_code: 'EUR',
-            value: totals.total.toFixed(2),
-            breakdown: {
-              item_total: { currency_code: 'EUR', value: totals.subtotal.toFixed(2) },
-              shipping: { currency_code: 'EUR', value: totals.shipping.toFixed(2) }
-            }
-          },
-          items: items
-        }]
-      });
-    },
-    onApprove: function (data, actions) {
-      return actions.order.capture().then(function (details) {
-        var isIT = document.documentElement.lang === 'it';
-        alert(isIT ? 'Grazie per il tuo ordine, ' + details.payer.name.given_name + '! Riceverai una conferma via email.'
-                    : 'Thank you for your order, ' + details.payer.name.given_name + '! You will receive a confirmation email.');
-        cart = [];
-        saveCart();
-        updateCartBadge();
-        renderCart();
-        toggleCart();
-      });
-    },
-    onError: function (err) {
-      console.error('PayPal error:', err);
-    }
-  }).render('#paypal-button-container');
-}
+  var lines = [];
+  lines.push(isIT ? 'NUOVO ORDINE — Tenuta le Rogge' : 'NEW ORDER — Tenuta le Rogge');
+  lines.push('');
+  lines.push(isIT ? '--- CLIENTE ---' : '--- CUSTOMER ---');
+  lines.push((isIT ? 'Nome: ' : 'Name: ') + name);
+  lines.push((isIT ? 'Indirizzo: ' : 'Address: ') + address);
+  lines.push((isIT ? 'Città: ' : 'City: ') + city + ' ' + zip);
+  lines.push((isIT ? 'Paese: ' : 'Country: ') + country);
+  lines.push('Email: ' + email);
+  if (phone) lines.push((isIT ? 'Telefono: ' : 'Phone: ') + phone);
+  lines.push('');
+  lines.push(isIT ? '--- ORDINE ---' : '--- ORDER ---');
 
-// Try to init PayPal when SDK loads
-if (document.readyState === 'complete') {
-  initPayPal();
-} else {
-  window.addEventListener('load', initPayPal);
+  cart.forEach(function (item) {
+    lines.push(item.qty + 'x ' + item.name + ' — €' + (item.price * item.qty).toFixed(2));
+  });
+
+  lines.push('');
+  lines.push((isIT ? 'Subtotale: €' : 'Subtotal: €') + totals.subtotal.toFixed(2));
+  lines.push((isIT ? 'Spedizione (' : 'Shipping (') + zoneName + '): €' + totals.shipping.toFixed(2));
+  lines.push((isIT ? 'TOTALE: €' : 'TOTAL: €') + totals.total.toFixed(2));
+
+  var subject = encodeURIComponent(isIT ? 'Nuovo ordine da ' + name : 'New order from ' + name);
+  var body = encodeURIComponent(lines.join('\n'));
+
+  window.location.href = 'mailto:albertocarlotti@hotmail.it?subject=' + subject + '&body=' + body;
 }
