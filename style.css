@@ -108,6 +108,15 @@ nav.scrolled {
   object-fit: contain;
 }
 
+.nav-logo-text {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+nav.show-title .nav-logo-text {
+  opacity: 1;
+}
+
 .nav-logo:hover {
   color: var(--gold);
 }
@@ -214,9 +223,18 @@ nav.scrolled {
   border: 0;
 }
 
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
 .hero-logo-img {
   width: auto;
-  height: min(65vh, 700px);
+  height: min(55vh, 600px);
   max-width: 90vw;
   object-fit: contain;
   margin-bottom: 1rem;

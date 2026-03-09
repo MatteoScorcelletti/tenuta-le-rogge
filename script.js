@@ -1,15 +1,24 @@
-// Navbar scroll effect
+// Navbar scroll effect + hero title toggle
 const navbar = document.getElementById('navbar');
 let ticking = false;
+
+var heroSection = document.querySelector('.hero');
+var heroBottom = heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 300;
 
 window.addEventListener('scroll', function () {
   if (!ticking) {
     requestAnimationFrame(function () {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
+      navbar.classList.toggle('show-title', window.scrollY > heroBottom - 80);
       ticking = false;
     });
     ticking = true;
   }
+});
+
+// Recalculate hero bottom on resize
+window.addEventListener('resize', function () {
+  if (heroSection) heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
 });
 
 // Mobile navigation
