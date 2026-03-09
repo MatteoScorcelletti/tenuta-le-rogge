@@ -794,11 +794,14 @@ nav.scrolled {
   color: var(--gold);
 }
 
-.cart-drawer-body {
+.cart-drawer-scroll {
   flex: 1;
   overflow-y: auto;
-  padding: 1.5rem 1.8rem;
   min-height: 0;
+}
+
+.cart-drawer-body {
+  padding: 1.5rem 1.8rem;
 }
 
 .cart-empty {
@@ -869,9 +872,6 @@ nav.scrolled {
 .cart-drawer-footer {
   padding: 1.5rem 1.8rem;
   border-top: 1px solid rgba(255,255,255,0.1);
-  overflow-y: auto;
-  flex-shrink: 1;
-  min-height: 0;
 }
 
 .cart-shipping label {
