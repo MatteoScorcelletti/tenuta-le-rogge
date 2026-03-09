@@ -194,8 +194,8 @@ nav.scrolled {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: var(--cream);
-  color: var(--maroon);
+  background: #000;
+  color: var(--white);
   padding: 5rem 2rem 2rem;
   position: relative;
   overflow: hidden;
