@@ -538,6 +538,14 @@ nav.show-title .nav-bio-img {
   color: var(--text-muted);
 }
 
+.wine-bio-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 2px;
+  margin-top: 0.7rem;
+}
+
 .wine-card-body {
   padding: 1.5rem 2rem;
 }
