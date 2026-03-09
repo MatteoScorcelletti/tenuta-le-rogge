@@ -123,6 +123,7 @@ nav.show-title .nav-logo-text {
   font-weight: 600;
   letter-spacing: 0.12em;
   color: var(--white);
+  margin-left: 190px;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -1403,6 +1404,11 @@ footer {
 
   .nav-hamburger {
     display: flex;
+  }
+
+  .nav-docg,
+  .nav-bio-img {
+    display: none;
   }
 
   .hero-logo-img {
