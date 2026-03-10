@@ -1238,24 +1238,10 @@ nav.show-title .nav-bio-img {
 }
 
 /* ========================================
-   BARREL PHOTO
-   ======================================== */
-.barrel-photo {
-  width: 100%;
-  overflow: hidden;
-}
-
-.barrel-photo-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-/* ========================================
    CONTACT
    ======================================== */
 .contact {
-  background: var(--maroon);
+  background: linear-gradient(rgba(42, 16, 16, 0.75), rgba(42, 16, 16, 0.75)), url('images/AlbiFilosofiaCropped.png') center / cover no-repeat;
   padding: 6rem 2rem;
   text-align: center;
 }
