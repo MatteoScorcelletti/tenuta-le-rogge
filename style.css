@@ -1463,6 +1463,10 @@ footer {
     gap: 2.5rem;
   }
 
+  .contact {
+    background-image: linear-gradient(rgba(42, 16, 16, 0.75), rgba(42, 16, 16, 0.75)), url('images/AlbiFilosofiaMobile.png');
+  }
+
 }
 
 @media (max-width: 480px) {
