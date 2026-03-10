@@ -69,7 +69,7 @@ document.querySelectorAll('.fade-up').forEach(function (el) {
 var cart = JSON.parse(localStorage.getItem('tlr-cart') || '[]');
 
 var SHIPPING_RATES = {
-  italy: 9,
+  italy: 0,
   eu: 20,
   world: 40
 };
