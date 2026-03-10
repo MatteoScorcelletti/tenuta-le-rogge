@@ -1238,6 +1238,20 @@ nav.show-title .nav-bio-img {
 }
 
 /* ========================================
+   BARREL PHOTO
+   ======================================== */
+.barrel-photo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.barrel-photo-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================================
    CONTACT
    ======================================== */
 .contact {
@@ -1409,6 +1423,8 @@ footer {
 
   .nav-logo-text {
     text-align: center;
+    line-height: 1;
+    display: inline-block;
   }
 
   .nav-docg {
