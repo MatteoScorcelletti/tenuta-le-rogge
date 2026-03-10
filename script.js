@@ -68,13 +68,10 @@ document.querySelectorAll('.fade-up').forEach(function (el) {
 // ========================================
 var cart = JSON.parse(localStorage.getItem('tlr-cart') || '[]');
 
-var SHIPPING_RATES = {
-  italy: 0,
-  eu: 20,
-  world: 40
-};
-
-var MIN_BOTTLES = 6;
+// Shipping: 1 bottle (gift) = €6 IT / €9 EU; 2-5 bottles = €9 IT / €9 EU; 6+ (case) = free IT / €20 EU
+var SHIPPING_GIFT = { italy: 6, eu: 9, world: 40 };
+var SHIPPING_SMALL = { italy: 9, eu: 9, world: 40 };
+var SHIPPING_CASE = { italy: 0, eu: 20, world: 40 };
 
 function saveCart() {
   localStorage.setItem('tlr-cart', JSON.stringify(cart));
@@ -122,29 +119,63 @@ function changeQty(id, delta) {
   renderCart();
 }
 
+function getShippingRate(zone, totalBottles) {
+  if (totalBottles === 1) return SHIPPING_GIFT[zone];
+  if (totalBottles < 6) return SHIPPING_SMALL[zone];
+  var cases = Math.ceil(totalBottles / 6);
+  return cases * SHIPPING_CASE[zone];
+}
+
+function updateShippingOptions(totalBottles) {
+  var select = document.getElementById('shippingZone');
+  if (!select) return;
+  var isIT = document.documentElement.lang === 'it';
+  var opts = select.options;
+
+  if (totalBottles === 1) {
+    opts[0].text = isIT ? 'Italia — Pacco regalo €6' : 'Italy — Gift package €6';
+    opts[1].text = isIT ? 'Europa — Pacco regalo €9' : 'Europe — Gift package €9';
+    opts[2].text = isIT ? 'Resto del mondo — €40' : 'Rest of world — €40';
+  } else if (totalBottles >= 2 && totalBottles <= 5) {
+    opts[0].text = isIT ? 'Italia — €9' : 'Italy — €9';
+    opts[1].text = isIT ? 'Europa — €9' : 'Europe — €9';
+    opts[2].text = isIT ? 'Resto del mondo — €40' : 'Rest of world — €40';
+  } else {
+    opts[0].text = isIT ? 'Italia — Gratis' : 'Italy — Free';
+    opts[1].text = isIT ? 'Europa — €20 per cartone' : 'Europe — €20 per case';
+    opts[2].text = isIT ? 'Resto del mondo — €40 per cartone' : 'Rest of world — €40 per case';
+  }
+}
+
 function updateCartTotals() {
   var subtotal = cart.reduce(function (sum, item) { return sum + item.price * item.qty; }, 0);
   var totalBottles = getTotalBottles();
-  var cases = Math.ceil(totalBottles / 6);
   var zone = document.getElementById('shippingZone').value;
-  var shipping = cases * SHIPPING_RATES[zone];
+  var shipping = getShippingRate(zone, totalBottles);
+
+  updateShippingOptions(totalBottles);
 
   document.getElementById('cartSubtotal').textContent = '\u20AC' + subtotal.toFixed(2);
   document.getElementById('cartShipping').textContent = '\u20AC' + shipping.toFixed(2);
   document.getElementById('cartTotal').textContent = '\u20AC' + (subtotal + shipping).toFixed(2);
 
-  // Show minimum warning
+  // Show contextual note
   var noteEl = document.querySelector('.cart-min-note');
   if (noteEl) {
-    if (totalBottles > 0 && totalBottles < MIN_BOTTLES) {
-      var isIT = document.documentElement.lang === 'it';
+    var isIT = document.documentElement.lang === 'it';
+    if (totalBottles === 1) {
+      noteEl.innerHTML = '<span class="cart-gift-note">' +
+        (isIT ? '🎁 Pacco regalo! Aggiungi 5 bottiglie per spedizione gratuita in Italia.'
+              : '🎁 Gift package! Add 5 bottles for free shipping in Italy.') +
+        '</span>';
+    } else if (totalBottles >= 2 && totalBottles <= 5) {
       noteEl.innerHTML = '<span class="cart-min-warning">' +
-        (isIT ? 'Aggiungi ancora ' + (MIN_BOTTLES - totalBottles) + ' bottiglie per raggiungere il minimo di 6.'
-              : 'Add ' + (MIN_BOTTLES - totalBottles) + ' more bottles to reach the minimum of 6.') +
+        (isIT ? 'Aggiungi ancora ' + (6 - totalBottles) + ' bottiglie per spedizione gratuita in Italia!'
+              : 'Add ' + (6 - totalBottles) + ' more bottles for free shipping in Italy!') +
         '</span>';
     } else {
-      var isIT2 = document.documentElement.lang === 'it';
-      noteEl.textContent = isIT2 ? 'Ordine minimo: 6 bottiglie (1 cartone), anche miste.' : 'Minimum order: 6 bottles (1 case), can be mixed.';
+      noteEl.textContent = isIT ? 'Spedizione gratuita in Italia! €20 per cartone in Europa.'
+                                : 'Free shipping in Italy! €20 per case in Europe.';
     }
   }
 
@@ -238,8 +269,8 @@ function initPayPal() {
       var isIT = document.documentElement.lang === 'it';
       var totalBottles = getTotalBottles();
 
-      if (totalBottles < MIN_BOTTLES) {
-        alert(isIT ? 'Ordine minimo: 6 bottiglie.' : 'Minimum order: 6 bottles.');
+      if (totalBottles < 1) {
+        alert(isIT ? 'Il carrello è vuoto.' : 'Your cart is empty.');
         return;
       }
 
